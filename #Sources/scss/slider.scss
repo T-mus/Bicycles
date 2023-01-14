@@ -62,7 +62,7 @@
          }
       }
 
-		&__dot {
+	&__dot {
          width: 10px;
          height: 10px;         
          border-radius: 50%;
@@ -70,22 +70,21 @@
          margin: 0 5px;
 
          transition: all 0.3s ease;
-
-         @media (min-width: 768px) {
-            &:hover {
-               border: none;
-               background-color: #a9afb3;
-               transform: scale(1.2);
-               cursor: pointer;
-            }
-         }
-		}
+	}
 
       @media (max-width: 1100px) {
          padding: 80px 0 70px 0;
 
          &__row {
             padding: 0 0 40px 0;
+         }
+      }
+	@media (min-width: 768px) {
+         .slider__dot:hover {
+            border: none;
+            background-color: #a9afb3;
+            transform: scale(1.2);
+            cursor: pointer;
          }
       }
 }
