@@ -80,11 +80,16 @@
          }
       }
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
          .slider__dot:hover {
             border: none;
             background-color: #a9afb3;
             transform: scale(1.2);
             cursor: pointer;
+         }
+      }
+@media (max-width: 768px) {
+         .slider__dot:hover {
+            border: 1px solid #a9afb3;      
          }
       }
