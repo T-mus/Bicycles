@@ -79,7 +79,8 @@
             padding: 0 0 40px 0;
          }
       }
-	@media (min-width: 768px) {
+}
+@media (min-width: 768px) {
          .slider__dot:hover {
             border: none;
             background-color: #a9afb3;
@@ -87,4 +88,3 @@
             cursor: pointer;
          }
       }
-}
