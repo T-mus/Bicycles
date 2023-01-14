@@ -1,0 +1,72 @@
+// Fonts ↓
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+// Variables ↓
+$fontfamilly: 'Lato';
+
+// Null styles ↓
+@import 'null-style.scss';
+
+// Method ibg ↓
+@import 'Method-ibg.scss';
+
+html, body {
+   transition-duration: 0.9s;
+}
+// Stop scroll ↓
+.stop {
+   overflow: hidden;
+}
+
+// Main wrapper ↓
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+}
+
+// Container ↓
+.container {
+   max-width: 1130px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+// Tag main
+.page {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   display: flex;
+   flex-direction: column;
+}
+
+// Header-Intro ↓
+@import 'header.scss';
+
+// About ↓
+@import 'about.scss';
+
+// Works ↓
+@import 'works.scss';
+
+// Slider ↓
+@import 'slider.scss';
+
+// Shop ↓
+@import 'shop.scss';
+
+// Subscribe form ↓
+@import 'subscribe.scss';
+
+// Footer ↓
+@import 'footer.scss';
+
+
+
+
+
+
+
+
