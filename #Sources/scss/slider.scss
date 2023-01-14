@@ -56,7 +56,9 @@
          justify-content: center;
 		
          .active-dot {
+            border: none;
             background-color: #a9afb3;
+            transform: scale(1.2);
          }
       }
 
@@ -69,11 +71,13 @@
 
          transition: all 0.3s ease;
 
-         &:hover {
-            border: none;
-            background-color: #a9afb3;
-            transform: scale(1.2);
-            cursor: pointer;
+         @media (min-width: 768px) {
+            &:hover {
+               border: none;
+               background-color: #a9afb3;
+               transform: scale(1.2);
+               cursor: pointer;
+            }
          }
 		}
 
