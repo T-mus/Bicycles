@@ -6,7 +6,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 export default defineConfig(() => {
     return {
-        base: 'js-vite-template-starter',
+        base: '/Bicycles',
         plugins: [
             Inspect(),
             injectHTML(),
