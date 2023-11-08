@@ -1,0 +1,56 @@
+.footer {
+   background-color: #f7f7f7;
+		&__row {
+         display: flex;
+         align-items: center;
+         padding: 100px 0;
+		}
+
+		&__column {
+         flex: 0 1 33.333%;
+		}
+
+		&__text {
+         font-size: 14px;
+         color: #848789;
+         line-height: 18px;
+         h4 {
+            font-weight: 700;
+         }
+		}
+
+      @media (max-width: 1100px) {
+         &__row {
+            padding: 50px 0;
+         }
+      }
+      @media (max-width: 600px) {
+         &__row {
+            padding: 30px 0;
+            flex-direction: column;
+            text-align: center;
+         }
+         &__column {
+            padding: 20px 0;
+         }
+      }
+}
+
+.social {
+   display: flex;
+   justify-content: center;
+		&__link {
+         margin: 0 7.5px;
+		}
+}
+.dev {
+   display: flex;
+   justify-content: end;
+   align-items: center;
+		&__author {
+         font-size: 14px;
+         font-style: italic;
+         color: #848789;
+         padding: 0 9px 0 0;
+		}
+}

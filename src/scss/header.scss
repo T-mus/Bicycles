@@ -1,0 +1,211 @@
+.header {
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    z-index: 10;
+
+    &__row {
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.5s ease 0s;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+        transition: all 0.5s ease 0s;
+    }
+
+    @media (max-width: 400px) {
+        &__logo {
+            height: 60px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// Menu ↓
+.menu {
+    transition: all 0.5s ease 0s;
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 0 37.5px;
+        &:nth-child(2) {
+            padding: 0 110px 0 37.5px;
+        }
+        &:nth-child(3) {
+            padding: 0 37.5px 0 110px;
+        }
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        color: #4d4959;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: #64c29e;
+        }
+    }
+
+    // Adaptive ↓
+    @media (max-width: 767px) {
+        &__body {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+
+            overflow: auto; // надає прокрутку
+            padding-top: 150px;
+
+            transition: all 0.4s ease 0s;
+
+            transform: translateY(-100%);
+
+            &.by-scroll {
+                transform: translateY(calc(-100% + 70px));
+            }
+
+            &.active {
+                transform: translateY(0);
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__link {
+            color: #fff;
+            font-size: 20px;
+
+            padding: 0 0 35px 0;
+            &:nth-child(2),
+            &:nth-child(3) {
+                padding: 0 0 35px 0;
+            }
+        }
+    }
+}
+
+// Burger ↓
+.burger-menu {
+    display: none;
+    @media (max-width: 767px) {
+        & {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 35px;
+            z-index: 10;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+
+            span {
+                position: absolute;
+                top: 9px;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+                background-color: #64c29e;
+
+                &:first-child {
+                    top: 0;
+                }
+                &:last-child {
+                    top: auto;
+                    bottom: 0px;
+                }
+                transition: all 0.3s ease 0s;
+            }
+
+            &.active {
+                span {
+                    transform: scale(0);
+                    &:first-child {
+                        transform: rotate(45deg);
+                        top: 9px;
+                        // transition: all 0.3s ease 0s;
+                    }
+                    &:last-child {
+                        transform: rotate(-45deg);
+                        bottom: 9px;
+                        // transition: all 0.3s ease 0s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Intro ↓
+.intro {
+    flex: 1 0 100%;
+    position: relative;
+    &__bg {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Fixed (js) ↓
+.fixed {
+    position: fixed;
+    top: 0px;
+
+    .header {
+        &__logo {
+            height: 60px;
+            padding: 5px 0 0 0;
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .menu {
+        &__link {
+            color: #fff;
+            &:hover {
+                color: #64c29e;
+            }
+        }
+    }
+
+    .burger-menu {
+        top: 25px;
+        right: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .fixed-background {
+        height: 70px;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(8px);
+    }
+}

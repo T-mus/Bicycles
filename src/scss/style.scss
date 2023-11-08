@@ -1,0 +1,83 @@
+//| Fonts ↓
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+//| Icons Font ↓
+//@import 'icons-font.scss';
+
+/* --------------------
+| Variables ↓
+--------------------*/
+//< Font ↓
+$fontFamilly: 'Lato', sans-serif;
+$fontSize: 14px;
+$fzColor: #fff;
+
+//< Basic colors ↓
+$bgColor: #fff;
+
+//< Basic sizes ↓
+$minWidth: 320;
+$containerWidth: 1130;
+$tamplateWidth: 1920;
+
+//< Basic breakppoints ↓
+$mb1min: 992.9px;
+$mb1max: 992.8px;
+$mb2min: 768.9px;
+$mb2max: 768.8px;
+$mb3min: 480.9px;
+$mb3max: 480.8px;
+
+//> Bootstap vars ↓
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-active-bg: #696969;
+$carousel-indicator-transition: opacity 0.3s ease;
+$carousel-dark-indicator-active-bg: #696969;
+
+/* -------------------- 
+| Additional files ↓
+--------------------*/
+@import 'bootstrap/scss/bootstrap.scss';
+
+@import 'null-style.scss';
+@import 'Method-ibg.scss';
+
+/* --------------------
+| Main Styles ↓
+--------------------*/
+.stop {
+    overflow: hidden;
+}
+._container {
+    max-width: $containerWidth + px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------
+| Main Files ↓
+--------------------*/
+@import 'header.scss';
+@import 'about.scss';
+@import 'works.scss';
+@import 'slider.scss';
+@import 'shop.scss';
+@import 'subscribe.scss';
+@import 'footer.scss';

@@ -1,0 +1,100 @@
+// Slider ↓
+.slider-bg {
+    background-color: #f7f7f7;
+}
+
+.carousel-indicators {
+    button {
+        width: $carousel-indicator-width;
+        height: $carousel-indicator-height;
+        background-color: #a9afb3;
+        margin-right: 5px;
+        border-radius: 50%;
+        cursor: pointer !important;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            background-color: $carousel-indicator-active-bg;
+        }
+    }
+}
+.slider {
+    padding: 120px 0 70px 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    & * ::selection {
+        background-color: rgba(53, 55, 56, 0);
+        color: rgba(132, 135, 137);
+    }
+    & * :hover {
+        cursor: default;
+    }
+    &__row {
+        display: flex;
+        transition: all 0.6s ease 0s;
+        padding: 0 0 80px 0;
+    }
+
+    &__item {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__icon {
+        padding: 0 0 36px 0;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #353738;
+        letter-spacing: 3px;
+        padding: 0 0 25px 0;
+
+        span {
+            font-size: 18px;
+            font-weight: 300;
+            color: #848789;
+        }
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 34px;
+        font-style: italic;
+        color: #848789;
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+
+        .active-dot {
+            border: none;
+            background-color: #a9afb3;
+            transform: scale(1.2);
+        }
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #a9afb3;
+        margin: 0 5px;
+
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 80px 0 70px 0;
+
+        &__row {
+            padding: 0 0 40px 0;
+        }
+    }
+}
